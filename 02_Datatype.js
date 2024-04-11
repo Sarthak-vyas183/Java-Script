@@ -58,6 +58,61 @@
 
 // === triple equal check the data strictly : 
 // matlab === data value ke sath sath data type ko bhi check karta hai 
-const id = Symbol("123");
- const anotherid = Symbol("123");
- console.log(id === anotherid);
+
+
+//**************************Heap/stack*****************************************************
+// eg- of stack : 
+// call by copy :
+// let Username = "sarthakvyas@183";
+// let name = Username;
+//  name = "sarthak";
+//  console.log(name);
+
+// // eg - of Heap : 
+// // call by referance 
+// let userOne = {
+//     email : "vyasartha183",
+//     upi : "vdskjfjdhflj@dlkfjdlk"
+// } 
+// let usertwo = userOne;
+// usertwo.email = "Nachiketavyas@gmail.com"; 
+// console.log(userOne.email);
+// root value change  hoti hai 
+
+
+//String Interpolation : 
+const name = "sarthak";
+const repocount = 20;
+const industry = "IT";
+//console.log(`My name is ${name} and my repository count is ${repocount} and i from ${industry} industry : `);
+
+const gameName = new String("bad-minton");
+// console.log(gameName)
+// console.log(gameName[2]);
+// console.log(gameName.__proto__);  
+// console.log(gameName.length)
+// console.log(gameName.toUpperCase());
+// console.log(gameName);
+
+
+//console.log(gameName[5])
+//console.log(gameName.charAt(5))
+// console.log(gameName.indexOf('t'))
+
+// const substring = gameName.substring(0,5);
+// console.log(substring) 
+
+//console.log(gameName.slice (0,5))  //one of the best think with slice that is we can go with negative indxing : 
+// console.log(gameName.slice())  unable to understand slice method : 4
+
+// trim remove the spaces from start :  
+const desc = "my name is sarthak vyas"
+//console.log(desc.trim());
+
+// console.log(desc.trim(desc.replace("sarthak vyas" , "nachiketa vyas")))
+
+//includes method return boolean value true or false : includes method is exist in a string or an array or not 
+//console.log(desc.includes("sarthak"));
+console.log(desc.split(' '))
+
+
