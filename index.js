@@ -12,3 +12,6 @@ console.log(Accname);
 //accId = 58;    Not allow 
 console.log(accity);   
 
+
+// prefer not to use var 
+
