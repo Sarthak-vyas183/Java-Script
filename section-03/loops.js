@@ -192,4 +192,3 @@ const totalPrice = shopingcart.reduce( (accumulator , currentvalue) => {
 } ,0 )
 
 //console.log(totalPrice)
-
