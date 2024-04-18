@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM || chai our code : </title>
+</head>
+<body>
+    <div class="language">
+        <li>java script </li>
+    </div>
+</body>
+<script>
+      function addlanguage(langname) {
+          const li = document.createElement("li")
+          li.innerHTML = `${langname}`;
+       const main = document.querySelector(".language")
+         main.appendChild(li);
+      }
+      addlanguage("python")
+      addlanguage("java")
+     
+// second optimal way to do this same work : 
+   function addOptimalSolution(langname) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langname));
+      document.querySelector(".language").appendChild(li)
+   }
+
+   addOptimalSolution("TypeScript")
+
+// 
+
+
+
+</script>
+</html>
