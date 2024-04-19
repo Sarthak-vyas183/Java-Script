@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    </style>
+</head>
+<body class="body">
+   <h1>some images of from</h1>
+   <li id="li"><img id="img" src="/" alt="1"></li>
+   <li id="li"><img id="img" src="#" alt="2"></li>
+   <li id="li"><img id="img" src="#" alt="3"></li>
+   <li id="li"><img id="img" src="#" alt="4"></li>
+   <li id="li"><img id="img" src="#" alt="5"></li>
+
+   </body>
+<script>
+   const litags = document.querySelectorAll("#li")
+   litags.forEach((li)=>{
+        li.addEventListener("click" , (e)=>{
+          //console.log(li)
+          //e.target.style.display = "none"  // using this we can hide img 
+         // e.target.parentNode.remove()  // second approach  e.target.parentNode is use to select parent of the element
+         //li.style.display = "none";
+
+   console.log(e.target.tagName)
+   if(e.target.tagName === 'IMG') {
+     e.target.parentNode.remove()
+  }
+
+
+        })
+   })
+</script>
+</html>

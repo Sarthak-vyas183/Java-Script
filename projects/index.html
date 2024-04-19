@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+           
+        }
+       .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+        height: 50vh;
+        background-color: rgb(105, 100, 92);
+        padding: 20px;
+       }
+       button {
+        width: 150px;
+        height: 150px;
+        margin-left: 20px;
+       } 
+       .blue {
+        background-color: blue;
+       }
+       .purple {
+        background-color: purple;
+       }
+       .green {
+        background-color: green;
+       }
+       .pink {
+        background-color: pink;
+       }
+       p{
+        width: 100px;
+        height: 30px;
+        background-color: rgb(134, 79, 8);
+        color: white;
+        margin: 20px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       }
+    </style>
+</head>
+<body>
+       
+
+      <div class="main">
+        <button id="button" class="blue"></button>
+        <button id="button" class="purple"></button>
+        <button id="button" class="green"></button>
+        <button id="button" class="pink"></button>
+      </div>
+</body>
+<script>
+   const buttons = document.querySelectorAll("#button"); 
+   const body = document.querySelector('body')
+  
+    buttons.forEach( (button)=>{
+          button.addEventListener("click" , (e)=>{
+             body.style.backgroundColor = e.target.className;
+          })
+    } )
+
+
+</script>
+</html>
