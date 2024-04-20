@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is a java script series : </h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const name = function(str) {
+        console.log(str, Date.now());
+    } 
+    let IntervalStart = true;
+
+   let setInter = setInterval(name , 1000, "shree Radha");
+
+    document.querySelector("#stop").addEventListener("click" , ()=>{
+            clearInterval(setInter)
+            IntervalStart = false;
+    })
+
+    document.querySelector('#start').addEventListener('click' , ()=>{
+           if(IntervalStart === false) {
+            setInter = setInterval(name , 1000, "shree Radha");
+            IntervalStart = true;
+           } else {
+            alert("Interval is start already");
+           }
+    })
+</script>
+
+</html>
