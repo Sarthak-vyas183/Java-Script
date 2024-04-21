@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            width: 300px;
+            height: 300px;
+            background-color: antiquewhite;
+            border-radius: 10px;
+            border: 1px solid black;
+            display: block;
+            justify-content: center;
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+        .img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-top: 20px;
+            margin-left: 80px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card"></div>
+</body>
+<script>
+    const xhr = new XMLHttpRequest();
+    const URL = 'https://api.github.com/users/Sarthak-vyas183'
+    xhr.open('GET' , URL)
+    xhr.onreadystatechange = function() {
+        console.log(xhr.readyState)
+        if(xhr.readyState === 4) {
+            const data =JSON.parse(this.responseText);
+            console.log(typeof data)
+            console.log(data.login)
+
+           let img = document.createElement('img')
+            img.className = "img"
+            img.src = data.avatar_url
+           document.querySelector('.card').appendChild(img)
+           console.log(img.src)
+
+           let p = document.createElement('p')
+           p.innerHTML = `Name : ${data.login} `
+           document.querySelector('.card').appendChild(p)
+
+           let A = document.createElement('a')
+           A.href = data.html_url;
+           A.innerHTML = 'Contact Us'
+           document.querySelector('.card').appendChild(A)
+            
+        }
+    }
+    xhr.send();
+    
+
+</script>
+</html>
