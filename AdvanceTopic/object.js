@@ -14,8 +14,7 @@ console.log(multiplyBy5.prototype)
 function createuser(username , score) {
     this.username = username
     this.score  = score
-         
-}
+} 
 
     
 
